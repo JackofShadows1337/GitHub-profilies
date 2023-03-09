@@ -7,7 +7,7 @@ const search = document.getElementById("search");
 getUser("JackOfShadows1337");
 
 async function getUser(username) {
-    const resp = await fetch(APIURL + username);
+    const resp = await fetch(APIURL + login);
     const respData = await resp.json();
 
     createUserCard(respData);
