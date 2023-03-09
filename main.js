@@ -7,7 +7,7 @@ const search = document.getElementById("search");
 getUser("JackOfShadows1337");
 
 async function getUser(username) {
-    const resp = await fetch(APIURL + login);
+    const resp = await fetch(APIURL + user);
     const respData = await resp.json();
 
     createUserCard(respData);
@@ -26,7 +26,7 @@ function createUserCard(user) {
     const cardHTML = `
         <div class="card">
             <div>
-                <img class="avatar" src="${user.avatar_url}" alt="${user.login}" />
+                <img class="avatar" src="${user.avatar_url}" alt="${user.name}" />
             </div>
             <div class="user-info">
                 <h2>${user.name}</h2>
